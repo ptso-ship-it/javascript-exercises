@@ -1,16 +1,40 @@
-const add = function() {
-	
+var userInput = 0
+const container = document.querySelector("#container")
+
+function choice(input) {
+
+	const display = document.createElement("div")
+	display.textContent = input
+	container.appendChild(display)
+	userInput = input
+}
+
+
+
+
+
+
+
+const add = function(a,b) {
+	return a+b
 };
 
-const subtract = function() {
-	
+const subtract = function(a,b) {
+	return a-b
 };
 
-const sum = function() {
+const sum = function(array) {
+	return array.reduce(function(acc, val) {
+		return acc + val
+		}, 0)
 	
-};
+}
 
-const multiply = function() {
+
+const multiply = function(array) {
+	return array.reduce((total, part) => {
+		return total*part
+	},1)
 
 };
 
